@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+
+<style>
+   *{
+    box-sizing: border-box;
+    font-family: Arial Black;
+   }
+   body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+   }
+   /*for tr and td styling*/
+
+  /*for tr and td styling*/
+
+   .navbar{
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+   }
+
+   .title {
+    font-size: 1.5rem;
+    margin: .5rem;
+
+   }
+
+   .links ul {
+     margin: 0;
+     padding: 0;
+     display: flex;
+   }
+
+   .links li{
+    border-radius: 10px;
+    list-style: none;
+    transition: .5s;
+
+   }
+   .links li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+
+   }
+   .active, .links li:hover{
+    background-color: gray;
+    
+   }
+
+   ul .profile{
+    display: none;
+   }
+
+   ul .career{
+    display: none;
+   }
+
+   ul .travel{
+    display: none;
+   }
+   
+
+
+
+
+
+    #button1 {
+    position: absolute;
+    top: 9px;
+    right: .90rem;
+    display: none;
+    
+   }
+   #button2 {
+    height: ;
+    position: absolute;
+    top: 9px;
+    right: .90rem;
+    display: none;
+   }
+
+   .container{
+    margin: 0;
+    padding: 0;
+   }
+
+   .main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+   }
+
+   .sidemenu{
+    width: 20%;
+    height: 100vh;
+    background-color:black;
+
+
+   }
+  .sidemenu li{
+    list-style: none;
+  }
+  .sidemenu ul{
+    padding: 0;
+    margin: 0;
+  }
+  .sidemenu li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+    transition: .5s;
+  }
+  .sidemenu li a:hover{
+    background-color:gray;
+    color: white;
+  }
+
+  .content{
+    padding-top: 100px;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+
+  }
+   
+  #image {
+    height: 500px;
+    max-width: 100%;
+    display: block;
+  }
+
+  .cardholder {
+    width: 350px;
+    height: 500px;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .cardholder img {
+    transform: scale(1.5);
+    transition: all .3s;
+  }
+  .cardholder img:hover {
+    transform: scale(1.3);
+    opacity: .3;
+  }
+
+  .imagedes {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    color: white;
+  }
+
+  .imagedes h2 {
+    font-weight: 700;
+    font-size: 30px;
+    transform: translatey(120px);
+    opacity: 0;
+    transition: 0.4s;
+
+  }
+  .imagedes p {
+    font-size: 15px;
+    transform: translatey(120px);
+    opacity: 0;
+    transition: 0.8s;
+  }
+
+
+  #cardbtn {
+    background-color: black;
+    border-style: none;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    transition: 1s;
+    transform: translatey(120px);
+  }
+  #cardbtn a{
+    text-decoration: none;
+    color: white;
+  }
+  #cardbtn:hover {
+    background-color:gray;
+    background-color: rgba(0,0,0,.1);
+  }
+
+
+
+  .cardholder:hover .imagedes h2 {
+     transform: translatey(0px);
+     opacity: 1;
+  }
+  .cardholder:hover .imagedes p {
+     transform: translatey(0px);
+     opacity: 1;
+  }
+  .cardholder:hover .imagedes #cardbtn {
+     transform: translatey(0px);
+     opacity: 1;
+  }
+
+
+@media (max-width: 600px) {
+   .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+   }
+   .links{
+    width: 100%;
+   }
+   .links li{
+    background-color: black;
+    
+   }
+     .content{
+    display: block;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+
+ 
+   ul .profile{
+    display: none;
+   }
+   ul #profile:hover .profile{
+    display: block;
+    background-color: black;
+   }
+
+
+
+   ul .career {
+    display: none;
+   }
+   ul #career:hover .career{
+    display: block;
+    background-color: black;
+   }
+
+   ul .travel {
+    display: none;
+   }
+   ul #travel:hover .travel{
+    display: block;
+    background-color: black;
+   }
+
+
+   .links li{
+    border-radius: 1px;
+    text-align: center;
+   }
+
+   .links ul{
+    width: 100%;
+    flex-direction: column;
+    display: none;
+   }
+
+   .sidemenu{
+    display: none;
+   }
+
+
+   .links ul.active {
+    display: flex;
+   }
+
+   .link ul.hide {
+    display: none;
+   }
+
+
+   #button1{
+    display: flex;
+   }
+   #button1.hide{
+    display: none;
+   }
+   #button2{
+    display: none;
+   }
+   #button2.active{
+    display: flex;
+   }
+}
+
+
+
+
+</style>
+<body>
+
+
+  <div class="navbar">
+    <div class="title">Travel</div>
+    <button id="button1" ><img src="menu.png"></button>
+    <button id="button2" ><img src="close.png"></button>
+    <div class="links">
+      <ul>
+        <li id="profile"><a href="profile.html">Profile</a>
+          <ul class="profile">
+           <li><a href="#">Personal Data</a></li>
+           <li><a href="#">Educational Background</a></li>
+           <li><a href="#">Family Background</a></li>
+           </ul>
+        </li>
+        <li id="career"><a href="career.html">Career</a>
+          <ul class="career">
+           <li><a href="#">Pilot</a></li>
+           <li><a href="#">Teacher</a></li>
+           <li><a href="#">SeaMan</a></li>
+           </ul>
+        </li>
+        <li id="travel" class="active"><a href="travel.html">Travel</a>
+          <ul class="travel">
+           <li><a href="#">Bogac, Surigao del Sur</a></li>
+           <li><a href="#">Kyoto, Japan</a></li>
+           <li><a href="#">Venice, Italy</a></li>
+           </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="main">
+     <div class="sidemenu">
+       <ul>
+         <li><a href="#">Kobe, Japan</a></li>
+         <li><a href="#">Kyoto, Japan</a></li>
+         <li><a href="#">Venice, Italy</a></li>
+       </ul>
+     </div>
+     <div class="content">
+       
+
+     </div>
+    </div>
+  </div>
+  
+  <script>
+
+     
+    
+     showMenu = document.querySelector('#button1');
+     hideMenu = document.querySelector('#button2');
+     menuitems = document.querySelector('.links ul');
+
+     showMenu.onclick =()=>{
+       menuitems.classList.add('active');
+       showMenu.classList.add('hide');
+       hideMenu.classList.add('active');
+
+     }
+    hideMenu.onclick =()=>{
+      menuitems.classList.remove('active');
+      showMenu.classList.remove('hide');
+      hideMenu.classList.remove('active');
+      
+    }
+
+
+     /*items = document.querySelector('.links ul');
+
+     var button = document.getElementById('button');
+     button.addEventListener('click', () => {
+  // Do something when the button is clicked
+     items.classList.add('active');
+     });*/
+
+  </script>
+
+</body>
+</html>
